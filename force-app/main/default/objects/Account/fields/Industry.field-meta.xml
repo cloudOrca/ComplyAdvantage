@@ -3,6 +3,6 @@
     <fullName>Industry</fullName>
     <securityClassification>Restricted</securityClassification>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>true</trackHistory>
+    <trackHistory>false</trackHistory>
     <type>Picklist</type>
 </CustomField>
