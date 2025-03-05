@@ -25,9 +25,9 @@ jobs:
                   ~/sfdx/bin/sfdx version
      
  
-      - name: Authenticate with Salesforce
+      - name: Authenticate with Salesforce Sandbox
         run: |
-         echo "${{secrets.SF_AUTH_URL}}"> authfile.txt
+         echo "${{secrets.SF_SANDBOX_AUTH_URL}}"> authfile.txt
          sfdx auth:sfdxurl:store -f authfile.txt --set-default-dev-hub
  
       - name: Create a New Package Version
