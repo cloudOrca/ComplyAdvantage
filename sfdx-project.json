@@ -12,7 +12,8 @@
         "force-app/main/default/triggers/*.trigger",
         "force-app/main/default/objects/*.object",
         "force-app/main/default/objects/*/fields/*.field",
-        "force-app/main/default/settings/*.settings"
+        "force-app/main/default/settings/*.settings",
+        "force-app/main/default/standardValueSets/*.standardValueSets"
       ]
     }
   ],
