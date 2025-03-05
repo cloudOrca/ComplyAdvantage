@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComplyAdvantage_Bank_Account__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>ComplyAdvantage Bank Account</label>
+    <referenceTo>ComplyAdvantage_Bank_Account__c</referenceTo>
+    <relationshipLabel>ComplyAdvantage Products</relationshipLabel>
+    <relationshipName>ComplyAdvantage_Products</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

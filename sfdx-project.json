@@ -1,0 +1,25 @@
+{
+  "packageDirectories": [
+    {
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "force-app",
+      "default": true,
+      "package": "ComplyAdvantagePackage",
+      "versionDescription": "External Mesh API",
+      "include": [
+       "force-app/main/default/classes/*.cls",
+        "force-app/main/default/triggers/*.trigger",
+        "force-app/main/default/objects/*.object",
+        "force-app/main/default/objects/*/fields/*.field"
+      ]
+    }
+  ],
+  "name": "complyadvantage",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0",
+  "packageAliases": {
+    "ComplyAdvantagePackage": "0HoQw000000003FKAQ"
+  }
+}
