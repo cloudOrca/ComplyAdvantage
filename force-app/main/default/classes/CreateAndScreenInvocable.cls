@@ -224,7 +224,7 @@ public class CreateAndScreenInvocable {
                 this.name = product.Name;
                 this.purpose = product.Purpose__c;
                 this.status = product.Status__c;
-                this.currncy = product.CurrencyIsoCode;
+                // this.currncy = product.CurrencyIsoCode;
             }
         }
     }
