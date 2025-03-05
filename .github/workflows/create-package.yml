@@ -32,5 +32,5 @@ jobs:
  
       - name: Create a New Package Version
         run: |
-         PACKAGE_ID="0HogK00000000BJSAY"
+         PACKAGE_ID="0HoQw000000003FKAQ"
          sfdx force:package:version:create -p $PACKAGE_ID --installation-key-bypass -w 10
