@@ -6,6 +6,7 @@
 		<name>ApexClass</name>
 	</types>
 	<types>
+		<members>Contact.MiddleName</members>
 		<members>Account.Incorporation_Date__c</members>
 		<members>Account.Industry__c</members>
 		<members>ComplyAdvantage_Bank_Account__c.Account_Number__c</members>
@@ -22,6 +23,10 @@
 		<members>ComplyAdvantage_Wallet__c</members>
 		<members>Mesh_External_API__c</members>
 		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>Currency</members>
+		<name>Settings</name>
 	</types>
 	<version>63.0</version>
 </Package>
