@@ -224,7 +224,7 @@ public class CreateAndScreenInvocable {
                 this.name = product.Name;
                 this.purpose = product.Purpose__c;
                 this.status = product.Status__c;
-                // this.currncy = product.CurrencyIsoCode;
+                this.currncy = product.CurrencyIsoCode;
             }
         }
     }
@@ -430,8 +430,8 @@ public class CreateAndScreenInvocable {
                 this.date_of_birth = new DDDate(con.Birthdate);
             }
 
-            this.first_name = con.FirstName;
-            // this.full_name = con.Name;
+            // this.first_name = con.FirstName;
+            this.full_name = con.Name;
             this.gender = con.GenderIdentity;
             this.industry = con.Account.Industry__c;
             // this.middle_name = con.MiddleName;
