@@ -1,40 +1,36 @@
-name: Salesforce Package Deployment
-
+name: Deploy External API to Salesforce
+ 
 on:
+  # Automatically triggers when there is a push to the main branch
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+      - master
+  # Optionally, allow manual triggering of the workflows
+  workflow_dispatch:
+ 
 jobs:
-  build:
+  create-package:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
+      - name: Checkout code
+        uses: actions/checkout@v4
+ 
       - name: Install Salesforce CLI
-        run: |
-          wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+        run : |
+          wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
           mkdir ~/sfdx
-          tar xJf sfdx-linux-amd64.tar.xz -C ~/sfdx --strip-components 1
-          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
-          sfdx --version
-
+                  tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+                  echo "$HOME/sfdx/bin" >> $GITHUB_PATH
+                  ~/sfdx/bin/sfdx version
+     
+ 
       - name: Authenticate with Salesforce
-        env:
-          SF_AUTH_URL: ${{ secrets.SF_AUTH_URL }}
         run: |
-          echo $SF_AUTH_URL > ./authfile.txt
-          sfdx auth:sfdxurl:store -f ./authfile.txt -a DevHub -s
-
-      - name: Create Package Version
+         echo "${{secrets.SF_AUTH_URL}}"> authfile.txt
+         sfdx auth:sfdxurl:store -f authfile.txt --set-default-dev-hub
+ 
+      - name: Create a New Package Version
         run: |
-          sfdx force:package:version:create --package MyPackage --installationkey "" --wait 10 --targetdevhubusername DevHub
-
-      - name: Install Package
-        run: |
-          sfdx force:package:install --package MyPackage --wait 10 --publishwait 10 --targetdevhubusername DevHub
+         PACKAGE_ID="0HoQw000000003FKAQ"
+         sfdx force:package:version:create -p $PACKAGE_ID --installation-key-bypass -w 10
