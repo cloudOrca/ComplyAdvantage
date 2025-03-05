@@ -11,7 +11,8 @@
        "force-app/main/default/classes/*.cls",
         "force-app/main/default/triggers/*.trigger",
         "force-app/main/default/objects/*.object",
-        "force-app/main/default/objects/*/fields/*.field"
+        "force-app/main/default/objects/*/fields/*.field",
+        "force-app/main/default/settings/*.settings"
       ]
     }
   ],
